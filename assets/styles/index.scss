@@ -1,1 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
+
+.failure {
+  border: 3px solid red;
+}
+
+.success {
+  border: 3px solid green;
+}
