@@ -12,10 +12,16 @@ const index = () => {
     }
   })
 }
-//
-// const show = () => {
-//
-// }
+
+const show = data => {
+  return $.ajax({
+    url: config.apiUrl + '/servants/' + data,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 const create = formData => {
   return $.ajax({
@@ -43,7 +49,7 @@ const destroy = function (data) {
 }
 module.exports = {
   index,
-  // show,
+  show,
   create,
   // update,
   destroy

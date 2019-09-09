@@ -9,6 +9,14 @@ const onIndex = event => {
     .catch(ui.failure)
 }
 
+const onGetServant = event => {
+  event.preventDefault()
+  const data = $(event.target).data('id')
+  api.show(data)
+    .then(ui.onShowSuccess)
+    .catch(ui.failure)
+}
+
 const onCreateServant = event => {
   event.preventDefault()
   const form = event.target
@@ -39,6 +47,7 @@ const addHandlers = () => {
   $('nav').on('submit', '.go-create-servant', onGoCreateServant)
   $('section').on('submit', '#new-servant', onCreateServant)
   $('nav').on('submit', '.show-servants', onIndex)
+  $('section').on('submit', '.show-servant', onGetServant)
   $('section').on('click', '.delete-button', onDeleteServant)
 }
 

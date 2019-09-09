@@ -9,6 +9,9 @@ const onIndexSuccess = (data) => {
   $('section').html(showServants)
 }
 
+const onShowSuccess = (data) => {
+  console.log(data)
+}
 const onCreateSuccess = responseData => {
   $('#message')
     .text('Servant created')
@@ -29,7 +32,7 @@ const failure = () => {
 
 module.exports = {
   onIndexSuccess,
-  // onShowSuccess,
+  onShowSuccess,
   // onDestroySuccess,
   onCreateSuccess,
   // onUpdateSuccess,
