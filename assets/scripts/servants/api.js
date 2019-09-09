@@ -34,10 +34,17 @@ const create = formData => {
   })
 }
 
-// const update = () => {
-//
-// }
-//
+const update = formData => {
+  return $.ajax({
+    url: config.apiUrl + '/servants/' + store.currentServant.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: formData
+  })
+}
+
 const destroy = function (data) {
   return $.ajax({
     url: config.apiUrl + '/servants/' + data,
@@ -51,6 +58,6 @@ module.exports = {
   index,
   show,
   create,
-  // update,
+  update,
   destroy
 }

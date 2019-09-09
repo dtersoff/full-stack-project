@@ -43,6 +43,7 @@ const signOutSuccess = () => {
   $('#message').removeClass()
   $('#message').addClass('success')
   store.user = null
+  store.currentServant = null
 }
 
 const failure = () => {
