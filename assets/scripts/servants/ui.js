@@ -29,13 +29,14 @@ const onUpdateSuccess = (data) => {
     .css('color', 'green')
   $('form').trigger('reset')
   store.currentServant = data.servant
+  onShowUpdate()
 }
 
 const goCreateServant = () => {
   $('section').html(createServantTemplate())
 }
 
-const onShowUpdate = (data) => {
+const onShowUpdate = () => {
   const showUpdate = updateServantTemplate({ servant: store.currentServant })
   $('section').html(showUpdate)
 }
