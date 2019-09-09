@@ -8,14 +8,10 @@ nav {
   border: 3px solid red;
 }
 
-.servants-display {
-  display: flex;
-}
-
-.show-servant {
-  display: flex;
-}
-
 .success {
   border: 3px solid green;
+}
+
+.servants-display, .single-servant, .update-form, .update-servant {
+  display: flex;
 }
