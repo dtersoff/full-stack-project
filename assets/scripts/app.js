@@ -11,7 +11,7 @@ const servantEvents = require('./servants/events')
 
 const frontPage = signInFormTemplate()
 $(() => {
-  $('section').html(frontPage)
+  $('.main-content').html(frontPage)
   authEvents.addHandlers()
   servantEvents.addHandlers()
 })

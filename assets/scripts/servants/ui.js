@@ -7,12 +7,12 @@ const updateServantTemplate = require('../templates/update-servant.handlebars')
 
 const onIndexSuccess = (data) => {
   const showServants = servantsTemplate({ servants: data.servants })
-  $('section').html(showServants)
+  $('.main-content').html(showServants)
 }
 
 const onShowSuccess = (data) => {
   const showServant = showServantTemplate({ servant: data.servant })
-  $('section').html(showServant)
+  $('.main-content').html(showServant)
   store.currentServant = data.servant
 }
 
@@ -33,12 +33,12 @@ const onUpdateSuccess = (data) => {
 }
 
 const goCreateServant = () => {
-  $('section').html(createServantTemplate())
+  $('.main-content').html(createServantTemplate())
 }
 
 const onShowUpdate = () => {
   const showUpdate = updateServantTemplate({ servant: store.currentServant })
-  $('section').html(showUpdate)
+  $('.main-content').html(showUpdate)
 }
 const failure = () => {
   $('#message').text('Failed operation')

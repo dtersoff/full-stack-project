@@ -61,13 +61,13 @@ const onDeleteServant = (event) => {
 
 const addHandlers = () => {
   $('nav').on('submit', '.go-create-servant', onGoCreateServant)
-  $('section').on('click', '.show-update', onShowUpdate)
+  $('.main-content').on('click', '.show-update', onShowUpdate)
 
-  $('section').on('submit', '#new-servant', onCreateServant)
+  $('.main-content').on('submit', '#new-servant', onCreateServant)
   $('nav').on('submit', '.show-servants', onIndex)
-  $('section').on('submit', '.show-servant-button', onGetServant)
-  $('section').on('submit', '.update-servant', onUpdateServant)
-  $('section').on('click', '.delete-button', onDeleteServant)
+  $('.main-content').on('submit', '.show-servant-button', onGetServant)
+  $('.main-content').on('submit', '.update-servant', onUpdateServant)
+  $('.main-content').on('click', '.delete-button', onDeleteServant)
 }
 
 module.exports = {
