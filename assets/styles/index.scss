@@ -4,8 +4,17 @@ nav {
   display: flex;
 }
 
+button,
+form {
+  padding: 2px;
+}
+
 .failure {
   border: 3px solid red;
+}
+
+.sort-options {
+  padding: 1px;
 }
 
 .success {
