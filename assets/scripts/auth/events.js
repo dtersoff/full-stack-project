@@ -28,6 +28,11 @@ const onSignIn = event => {
     .catch(ui.failure)
 }
 
+const onNavChangePassword = event => {
+  event.preventDefault()
+  ui.navChangePassword()
+}
+
 const onChangePassword = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -47,7 +52,8 @@ const addHandlers = () => {
   $('section').on('submit', '.sign-up', onSignUp)
   $('section').on('submit', '.sign-in', onSignIn)
   $('section').on('submit', '.change-password', onChangePassword)
-  $('section').on('submit', '.sign-out', onSignOut)
+  $('nav').on('submit', '#sign-out', onSignOut)
+  $('nav').on('submit', '.change-pw', onNavChangePassword)
 }
 module.exports = {
   addHandlers

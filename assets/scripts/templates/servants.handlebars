@@ -1,0 +1,9 @@
+{{#each servants as |servant|}}
+  {{log servant}}
+  <div class='border' data-id="{{servant.id}}">
+    <h5>Name: {{servant.name}}</h5>
+    <h5>Class: {{servant.sclass}}</h5>
+    <button class='btn btn-danger delete-button' data-id="{{servant.id}}">DELETE</button>
+  </div>
+
+{{/each}}
