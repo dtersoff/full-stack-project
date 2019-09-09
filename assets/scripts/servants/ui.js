@@ -2,15 +2,16 @@
 
 const servantsTemplate = require('../templates/servants.handlebars')
 const createServantTemplate = require('../templates/new-servant.handlebars')
+const showServantTemplate = require('../templates/show-servant.handlebars')
 
 const onIndexSuccess = (data) => {
-  console.log('we did it!')
   const showServants = servantsTemplate({ servants: data.servants })
   $('section').html(showServants)
 }
 
 const onShowSuccess = (data) => {
-  console.log(data)
+  const showServant = showServantTemplate({ servant: data.servant })
+  $('section').html(showServant)
 }
 const onCreateSuccess = responseData => {
   $('#message')

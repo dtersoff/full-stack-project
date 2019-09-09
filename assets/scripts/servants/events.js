@@ -47,7 +47,7 @@ const addHandlers = () => {
   $('nav').on('submit', '.go-create-servant', onGoCreateServant)
   $('section').on('submit', '#new-servant', onCreateServant)
   $('nav').on('submit', '.show-servants', onIndex)
-  $('section').on('submit', '.show-servant', onGetServant)
+  $('section').on('submit', '.show-servant-button', onGetServant)
   $('section').on('click', '.delete-button', onDeleteServant)
 }
 

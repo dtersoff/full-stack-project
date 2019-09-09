@@ -3,7 +3,10 @@
   <div class='border' data-id="{{servant.id}}">
     <h5>Name: {{servant.name}}</h5>
     <h5>Class: {{servant.sclass}}</h5>
-    <button class='btn btn-danger delete-button' data-id="{{servant.id}}">DELETE</button>
+    <form class="show-servant-button btn" data-id="{{servant.id}}">
+      <fieldset>
+        <input type='submit' value='Details'>
+      </fieldset>
   </div>
 
 {{/each}}
