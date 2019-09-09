@@ -10,6 +10,12 @@ const onIndexSuccess = (data) => {
   $('.main-content').html(showServants)
 }
 
+const onSortByAttackSuccess = (data) => {
+  const sort = data.servants.sort((a, b) => (a.atk > b.atk) ? -1 : 1)
+  const showServants = servantsTemplate({ servants: sort })
+  $('.main-content').html(showServants)
+}
+
 const onShowSuccess = (data) => {
   const showServant = showServantTemplate({ servant: data.servant })
   $('.main-content').html(showServant)
@@ -48,6 +54,7 @@ const failure = () => {
 }
 module.exports = {
   onIndexSuccess,
+  onSortByAttackSuccess,
   onShowSuccess,
   onCreateSuccess,
   onUpdateSuccess,

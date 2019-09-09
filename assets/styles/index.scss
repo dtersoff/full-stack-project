@@ -1,11 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  margin: 1em;
+}
+
 nav {
   display: flex;
 }
 
 button,
 form {
+  margin-right: 1em;
+  margin-bottom: 1em;
   padding: 2px;
 }
 

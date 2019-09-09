@@ -59,15 +59,24 @@ const onDeleteServant = (event) => {
     .css('color', 'green')
 }
 
+const onSortByAttack = event => {
+  event.preventDefault()
+  api.index()
+    .then(ui.onSortByAttackSuccess)
+    .catch(ui.failure)
+}
+
 const addHandlers = () => {
   $('nav').on('submit', '.go-create-servant', onGoCreateServant)
   $('.main-content').on('click', '.show-update', onShowUpdate)
 
-  $('.main-content').on('submit', '#new-servant', onCreateServant)
   $('nav').on('submit', '.show-servants', onIndex)
   $('.main-content').on('submit', '.show-servant-button', onGetServant)
+  $('.main-content').on('submit', '#new-servant', onCreateServant)
   $('.main-content').on('submit', '.update-servant', onUpdateServant)
   $('.main-content').on('click', '.delete-button', onDeleteServant)
+
+  $('.main-content').on('click', '.by-attack', onSortByAttack)
 }
 
 module.exports = {
