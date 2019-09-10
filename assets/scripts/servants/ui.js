@@ -16,11 +16,11 @@ const onSortByAttackSuccess = (data) => {
   $('.main-content').html(showServants)
 }
 
-// const onSortByClassSuccess = (data) => {
-//   const sort = store.sort.sortClass(data.servants)
-//   const showServants = servantsTemplate({ servants: sort })
-//   $('.main-content').html(showServants)
-// }
+const onSortByClassSuccess = (data) => {
+  const sort = store.sort.sortClass(data.servants)
+  const showServants = servantsTemplate({ servants: sort })
+  $('.main-content').html(showServants)
+}
 
 const onShowSuccess = (data) => {
   const showServant = showServantTemplate({ servant: data.servant })
@@ -61,7 +61,7 @@ const failure = () => {
 module.exports = {
   onIndexSuccess,
   onSortByAttackSuccess,
-  // onSortByClassSuccess,
+  onSortByClassSuccess,
   onShowSuccess,
   onCreateSuccess,
   onUpdateSuccess,
