@@ -45,8 +45,7 @@ const onCreateServant = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  const data = fillEmptyFields(formData)
-  api.create(data)
+  api.create(formData)
     .then(ui.onCreateSuccess)
     .catch(ui.failure)
 }
