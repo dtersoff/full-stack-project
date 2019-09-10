@@ -1,7 +1,29 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
+const store = require('../store')
 
+// // fills in empty fields when updating servant
+const fillEmptyFields = (data) => {
+  // emulating an object each by going through the keys and then comparing them in
+  // the object
+  const keys = Object.keys(store.currentServant)
+  keys[0].pop()
+  keys[keys.length - 1].pop()
+  keys.forEach(key => {
+    // if the value for that key in the given servant object is null
+    if (data.servant[key] === ('' || null || undefined)) {
+      // console.log('empty')
+      // apply the value of that key from the currently stored data.servant, which
+      // was stored when the update view was triggered
+      data.servant[key] = store.currentServant[key]
+    }
+    // console.log(data.servant)
+  })
+  return data
+}
+
+// nav button functions
 const onGoCreateServant = event => {
   event.preventDefault()
   ui.goCreateServant()
@@ -19,12 +41,13 @@ const onIndex = event => {
     .catch(ui.failure)
 }
 
+// CRUD functions
 const onCreateServant = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-
-  api.create(formData)
+  const data = fillEmptyFields(formData)
+  api.create(data)
     .then(ui.onCreateSuccess)
     .catch(ui.failure)
 }
@@ -66,6 +89,7 @@ const onSortByAttack = event => {
     .catch(ui.failure)
 }
 
+// sort options
 const onSortByClass = event => {
   event.preventDefault()
   api.index()

@@ -3,6 +3,8 @@
 const config = require('../config.js')
 const store = require('../store')
 
+// fills in empty fields when updating servant
+
 const index = () => {
   return $.ajax({
     url: config.apiUrl + '/servants',
