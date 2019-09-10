@@ -8,11 +8,13 @@ const fillEmptyFields = (data) => {
   // emulating an object each by going through the keys and then comparing them in
   // the object
   const keys = Object.keys(store.currentServant)
-  keys[0].pop()
-  keys[keys.length - 1].pop()
+  keys.pop()
+  keys.shift()
   keys.forEach(key => {
     // if the value for that key in the given servant object is null
-    if (data.servant[key] === ('' || null || undefined)) {
+    console.log(store.currentServant)
+    if (data.servant[key] === '' || data.servant[key] === null ||
+    data.servant[key] === undefined) {
       // console.log('empty')
       // apply the value of that key from the currently stored data.servant, which
       // was stored when the update view was triggered
@@ -64,7 +66,8 @@ const onUpdateServant = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  api.update(formData)
+  const data = fillEmptyFields(formData)
+  api.update(data)
     .then(ui.onUpdateSuccess)
     .catch(ui.failure)
 }
