@@ -5,13 +5,26 @@ const createServantTemplate = require('../templates/new-servant.handlebars')
 const showServantTemplate = require('../templates/show-servant.handlebars')
 const updateServantTemplate = require('../templates/update-servant.handlebars')
 
+// nav success methods
 const onIndexSuccess = (data) => {
   const showServants = servantsTemplate({ servants: data.servants })
   $('.main-content').html(showServants)
 }
 
+const onShowUpdate = () => {
+  const showUpdate = updateServantTemplate({ servant: store.currentServant })
+  $('.main-content').html(showUpdate)
+}
+
+// sort success methods
 const onSortByAttackSuccess = (data) => {
   const sort = data.servants.sort((a, b) => (a.atk > b.atk) ? -1 : 1)
+  const showServants = servantsTemplate({ servants: sort })
+  $('.main-content').html(showServants)
+}
+
+const onSortByHealthSuccess = (data) => {
+  const sort = data.servants.sort((a, b) => (a.hp > b.hp) ? -1 : 1)
   const showServants = servantsTemplate({ servants: sort })
   $('.main-content').html(showServants)
 }
@@ -22,6 +35,13 @@ const onSortByClassSuccess = (data) => {
   $('.main-content').html(showServants)
 }
 
+const onSortByBalanceSuccess = (data) => {
+  const sort = store.sort.doubleSort(data.servants)
+  const showServants = servantsTemplate({ servants: sort })
+  $('.main-content').html(showServants)
+}
+
+// CRUD success methods
 const onShowSuccess = (data) => {
   const showServant = showServantTemplate({ servant: data.servant })
   $('.main-content').html(showServant)
@@ -48,10 +68,6 @@ const goCreateServant = () => {
   $('.main-content').html(createServantTemplate())
 }
 
-const onShowUpdate = () => {
-  const showUpdate = updateServantTemplate({ servant: store.currentServant })
-  $('.main-content').html(showUpdate)
-}
 const failure = () => {
   $('#message').text('Failed operation')
   $('#message').removeClass()
@@ -61,7 +77,9 @@ const failure = () => {
 module.exports = {
   onIndexSuccess,
   onSortByAttackSuccess,
+  onSortByHealthSuccess,
   onSortByClassSuccess,
+  onSortByBalanceSuccess,
   onShowSuccess,
   onCreateSuccess,
   onUpdateSuccess,

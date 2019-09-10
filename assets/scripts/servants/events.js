@@ -12,15 +12,12 @@ const fillEmptyFields = (data) => {
   keys.shift()
   keys.forEach(key => {
     // if the value for that key in the given servant object is null
-    console.log(store.currentServant)
     if (data.servant[key] === '' || data.servant[key] === null ||
     data.servant[key] === undefined) {
-      // console.log('empty')
       // apply the value of that key from the currently stored data.servant, which
       // was stored when the update view was triggered
       data.servant[key] = store.currentServant[key]
     }
-    // console.log(data.servant)
   })
   return data
 }
@@ -85,6 +82,7 @@ const onDeleteServant = (event) => {
     .css('color', 'green')
 }
 
+// sort options
 const onSortByAttack = event => {
   event.preventDefault()
   api.index()
@@ -92,11 +90,24 @@ const onSortByAttack = event => {
     .catch(ui.failure)
 }
 
-// sort options
+const onSortByHealth = event => {
+  event.preventDefault()
+  api.index()
+    .then(ui.onSortByHealthSuccess)
+    .catch(ui.failure)
+}
+
 const onSortByClass = event => {
   event.preventDefault()
   api.index()
     .then(ui.onSortByClassSuccess)
+    .catch(ui.failure)
+}
+
+const onSortByBalance = event => {
+  event.preventDefault()
+  api.index()
+    .then(ui.onSortByBalanceSuccess)
     .catch(ui.failure)
 }
 
@@ -111,7 +122,10 @@ const addHandlers = () => {
   $('.main-content').on('click', '.delete-button', onDeleteServant)
 
   $('.main-content').on('click', '.by-attack', onSortByAttack)
+  $('.main-content').on('click', '.by-health', onSortByHealth)
   $('.main-content').on('click', '.by-class', onSortByClass)
+  $('.main-content').on('click', '.by-balance', onSortByBalance)
+
 }
 
 module.exports = {
