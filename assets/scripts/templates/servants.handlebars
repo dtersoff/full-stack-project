@@ -1,8 +1,13 @@
+<div class='sort-options'>
+  <button class='by-attack'>Sort by ATK</button>
+  <button class='by-class'>Sort by Class</button>
+</div>
+
 {{#each servants as |servant|}}
-  {{log servant}}
-  <div class='border' data-id="{{servant.id}}">
-    <h5>Name: {{servant.name}}</h5>
-    <h5>Class: {{servant.sclass}}</h5>
+
+  <div class='border servants-display' data-id="{{servant.id}}">
+    <div class="col-3">Name: {{servant.name}}</div>
+    <div class="col-2">Class: {{servant.sclass}}</div>
     <form class="show-servant-button btn" data-id="{{servant.id}}">
       <fieldset>
         <input type='submit' value='Details'>

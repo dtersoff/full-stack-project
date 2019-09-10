@@ -2,6 +2,12 @@
 const signInFormTemplate = require('./templates/sign-in.handlebars')
 const authEvents = require('./auth/events')
 const servantEvents = require('./servants/events')
+const store = require('./store')
+
+const sorterClass = require('./sorter.js')
+const Sorter = sorterClass.Sorter
+const sorter = new Sorter()
+store.sort = sorter
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
