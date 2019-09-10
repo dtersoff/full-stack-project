@@ -17,7 +17,7 @@ const signUpSuccess = () => {
 const signInSuccess = (data) => {
   store.user = data.user
 
-  $('section').html('')
+  $('.main-content').html('')
   $('nav').html(navTemplate())
   $('form').trigger('reset')
   $('#message').text('Successful sign-in ')
@@ -26,7 +26,7 @@ const signInSuccess = (data) => {
 }
 
 const goChangePassword = () => {
-  $('section').html(changePwTemplate())
+  $('.main-content').html(changePwTemplate())
 }
 
 const changePasswordSuccess = () => {
@@ -37,7 +37,7 @@ const changePasswordSuccess = () => {
 }
 
 const signOutSuccess = () => {
-  $('section').html(frontPage)
+  $('.main-content').html(frontPage)
   $('nav').html('')
   $('#message').text('Successfully signed out')
   $('#message').removeClass()

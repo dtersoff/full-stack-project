@@ -66,12 +66,12 @@ const onSortByAttack = event => {
     .catch(ui.failure)
 }
 
-const onSortByClass = event => {
-  event.preventDefault()
-  api.index()
-    .then(ui.onSortByClassSuccess)
-    .catch(ui.failure)
-}
+// const onSortByClass = event => {
+//   event.preventDefault()
+//   api.index()
+//     .then(ui.onSortByClassSuccess)
+//     .catch(ui.failure)
+// }
 
 const addHandlers = () => {
   $('nav').on('submit', '.go-create-servant', onGoCreateServant)
@@ -84,7 +84,7 @@ const addHandlers = () => {
   $('.main-content').on('click', '.delete-button', onDeleteServant)
 
   $('.main-content').on('click', '.by-attack', onSortByAttack)
-  $('.main-content').on('click', '.by-class', onSortByClass)
+  // $('.main-content').on('click', '.by-class', onSortByClass)
 }
 
 module.exports = {

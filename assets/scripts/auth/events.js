@@ -28,9 +28,9 @@ const onSignIn = event => {
     .catch(ui.failure)
 }
 
-const onNavChangePassword = event => {
+const onGoChangePassword = event => {
   event.preventDefault()
-  ui.navChangePassword()
+  ui.goChangePassword()
 }
 
 const onChangePassword = event => {
@@ -49,11 +49,11 @@ const onSignOut = event => {
 }
 
 const addHandlers = () => {
-  $('section').on('submit', '.sign-up', onSignUp)
-  $('section').on('submit', '.sign-in', onSignIn)
-  $('section').on('submit', '.change-password', onChangePassword)
+  $('.main-content').on('submit', '.sign-up', onSignUp)
+  $('.main-content').on('submit', '.sign-in', onSignIn)
+  $('.main-content').on('submit', '.change-password', onChangePassword)
   $('nav').on('submit', '#sign-out', onSignOut)
-  $('nav').on('submit', '.change-pw', onNavChangePassword)
+  $('nav').on('submit', '.change-pw', onGoChangePassword)
 }
 module.exports = {
   addHandlers

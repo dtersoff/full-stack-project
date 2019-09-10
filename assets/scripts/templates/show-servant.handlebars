@@ -1,15 +1,30 @@
 {{#if servant}}
   <div class='show-servant'>
     <div class='border single-servant' data-id="{{servant.id}}">
-      <h5>Name: {{servant.name}}</h5>
-      <h5>Class: {{servant.sclass}}</h5>
-      <h5>Rarity: {{servant.rarity}}-star</h5>
-      <h5>Level: {{servant.level}}</h5>
-      <h5>Attack: {{servant.atk}}</h5>
-      <h5>Health: {{servant.hp}}</h5>
-      <!-- <button class='btn show-button'>Show Details</button> -->
-      <button class='show-update'>Update</button>
-      <button class='btn btn-danger delete-button' data-id="{{servant.id}}">DELETE</button>
+      <!-- <div class="col">Name: {{servant.name}}</div>
+      <div class="col">Class: {{servant.sclass}}</div>
+      <div class="col">Rarity: {{servant.rarity}}-star</div>
+      <div class="col">Level: {{servant.level}}</div>
+      <div class="col">Attack: {{servant.atk}}</div>
+      <div class="col">Health: {{servant.hp}}</div> -->
+      <div class="key">
+        Name: <br>
+        Class: <br>
+        Rarity: <br>
+        Level: <br>
+        Attack: <br>
+        Health: <br>
+        <button class='btn btn-danger delete-button' data-id="{{servant.id}}">DELETE</button>
+      </div>
+      <div class="value">
+        {{servant.name}}<br>
+        {{servant.sclass}}<br>
+        {{servant.rarity}}<br>
+        {{servant.level}}<br>
+        {{servant.atk}}<br>
+        {{servant.hp}}<br>
+        <button class='show-update'>Update</button>
+      </div>
     </div>
   </div>
 {{/if}}
