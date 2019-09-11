@@ -46,6 +46,7 @@ const onShowSuccess = (data) => {
   const showServant = showServantTemplate({ servant: data.servant })
   $('.main-content').html(showServant)
   store.currentServant = data.servant
+  console.log(data.servant)
 }
 
 const onCreateSuccess = responseData => {
