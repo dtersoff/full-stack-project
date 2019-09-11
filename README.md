@@ -66,5 +66,5 @@ After meeting MVP for the project, I mostly worked on stretch goal features as t
 - As a user I want to be able to have the program run various calculations and make recommendations based on character strengths and weaknesses (save for after MVP)
 
 #### Wireframes
-https://imgur.com/ompOaFg  
+https://imgur.com/ompOaFg
 https://imgur.com/CZ97eR0
