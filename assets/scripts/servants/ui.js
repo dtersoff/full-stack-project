@@ -12,7 +12,7 @@ const onIndexSuccess = (data) => {
 }
 
 const onShowUpdate = () => {
-  const showUpdate = updateServantTemplate({ servant: store.currentServant })
+  const showUpdate = updateServantTemplate({ servant: store.currentServant, classes: store.sclasses })
   $('.main-content').html(showUpdate)
 }
 
