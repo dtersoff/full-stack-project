@@ -124,7 +124,6 @@ const addHandlers = () => {
   $('.main-content').on('click', '.by-health', onSortByHealth)
   $('.main-content').on('click', '.by-class', onSortByClass)
   $('.main-content').on('click', '.by-balance', onSortByBalance)
-
 }
 
 module.exports = {
