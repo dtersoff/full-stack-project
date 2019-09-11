@@ -12,7 +12,9 @@ const onIndexSuccess = (data) => {
 }
 
 const onShowUpdate = () => {
-  const showUpdate = updateServantTemplate({ servant: store.currentServant, classes: store.sclasses })
+  const showUpdate = updateServantTemplate({ servant: store.currentServant,
+    classes: store.sclasses,
+    rarities: [0, 1, 2, 3, 4, 5] })
   $('.main-content').html(showUpdate)
 }
 
@@ -46,7 +48,6 @@ const onShowSuccess = (data) => {
   const showServant = showServantTemplate({ servant: data.servant })
   $('.main-content').html(showServant)
   store.currentServant = data.servant
-  console.log(data.servant)
 }
 
 const onCreateSuccess = responseData => {

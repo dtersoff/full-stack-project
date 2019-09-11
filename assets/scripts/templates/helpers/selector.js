@@ -2,7 +2,11 @@
 const store = require('../../store')
 
 const selector = (dropValue) => {
-  return dropValue === store.currentServant.sclass
+  if (typeof dropValue === 'number') {
+    return dropValue === store.currentServant.rarity
+  } else {
+    return dropValue === store.currentServant.sclass
+  }
 }
 
 module.exports = selector

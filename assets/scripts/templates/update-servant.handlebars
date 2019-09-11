@@ -14,7 +14,7 @@
         <div class="line"><input type='text' name='servant[name]' placeholder='{{servant.name}}'></div>
         <div class="line">
           <select name='servant[sclass]'>
-            {{> class-dropdown classes=classes servant=servant}}
+            {{> create-dropdown inputs=classes}}
             <!-- <option selected="selected" value="{{servant.sclass}}">{{servant.sclass}}</option>
             <option value='Saber'>Saber</option>
             <option value='Lancer'>Lancer</option>
@@ -31,13 +31,14 @@
           </select>
         </div>
         <div class="line"><select name='servant[rarity]'>
-          <option selected="selected" value="{{servant.rarity}}">{{servant.rarity}}</option>
+          {{> create-dropdown inputs=rarities}}
+          <!-- <option selected="selected" value="{{servant.rarity}}">{{servant.rarity}}</option>
           <option value='0'>0</option>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
           <option value='4'>4</option>
-          <option value='5'>5</option>
+          <option value='5'>5</option> -->
         </select></div>
         <div class="line"><input type='text' name='servant[level]' placeholder='{{servant.level}}'></div>
         <div class="line"><input type='text' name='servant[atk]' placeholder='{{servant.atk}}'></div>
