@@ -1,34 +1,45 @@
 <form id='new-servant' class='border'>
   <fieldset>
     <legend>Add a new Servant</legend>
-    <input type='text' name='servant[name]' placeholder='Servant Name'><br>
-    <select name='servant[sclass]'>
-      <option value='Saber'>Saber</option>
-      <option value='Lancer'>Lancer</option>
-      <option value='Archer'>Archer</option>
-      <option value='Rider'>Rider</option>
-      <option value='Caster'>Caster</option>
-      <option value='Assassin'>Assassin</option>
-      <option value='Berserker'>Berserker</option>
-      <option value='Ruler'>Ruler</option>
-      <option value='Avenger'>Avenger</option>
-      <option value='Alter Ego'>Alter Ego</option>
-      <option value='Moon Cancer'>Moon Cancer</option>
-      <option value='Shielder'>Shielder</option>
-    </select><br>
-    <select name='servant[rarity]'>
-      <option value='0'>0</option>
-      <option value='1'>1</option>
-      <option value='2'>2</option>
-      <option value='3'>3</option>
-      <option value='4'>4</option>
-      <option value='5'>5</option>
-    </select><br>
-    <!-- <input type='text' name='servant[rarity]' placeholder='Servant Rarity'><br> -->
-    <input type='text' name='servant[level]' placeholder='Servant Level'><br>
-    <input type='text' name='servant[atk]' placeholder='Servant Attack'><br>
-    <input type='text' name='servant[hp]' placeholder='Servant HP'>
-    <input type='submit' value='Create Servant'>
+    <div class='new-servant'>
+      <div class="key">
+        <div class="line">Name: </div>
+        <div class="line">Class: </div>
+        <div class="line">Rarity: </div>
+        <div class="line">Level: </div>
+        <div class="line">Attack: </div>
+        <div class="line">Health: </div>
+      </div>
+      <div class="value">
+        <div class="line"><input type='text' name='servant[name]' placeholder='Servant Name'></div>
+        <div class="line"><select name='servant[sclass]'>
+          <option value='Saber'>Saber</option>
+          <option value='Lancer'>Lancer</option>
+          <option value='Archer'>Archer</option>
+          <option value='Rider'>Rider</option>
+          <option value='Caster'>Caster</option>
+          <option value='Assassin'>Assassin</option>
+          <option value='Berserker'>Berserker</option>
+          <option value='Ruler'>Ruler</option>
+          <option value='Avenger'>Avenger</option>
+          <option value='Alter Ego'>Alter Ego</option>
+          <option value='Moon Cancer'>Moon Cancer</option>
+          <option value='Shielder'>Shielder</option>
+        </select></div>
+        <div class="line"><select name='servant[rarity]'>
+          <option value='0'>0</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+        </select></div>
+        <!-- <input type='text' name='servant[rarity]' placeholder='Servant Rarity'><br> -->
+        <div class="line"><input type='text' name='servant[level]' placeholder='Servant Level'></div>
+        <div class="line"><input type='text' name='servant[atk]' placeholder='Servant Attack'></div>
+        <div class="line"><input type='text' name='servant[hp]' placeholder='Servant HP'></div>
+        <div class="line"><input type='submit' value='Create Servant'></div>
+    </div>
   </fieldset>
 </form>
 <div id='result'></div>

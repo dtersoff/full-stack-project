@@ -19,6 +19,12 @@ form {
   border: 3px solid red;
 }
 
+.line,  {
+  margin: 0;
+  padding-right: 1em;
+  height: 30px
+}
+
 .sort-options {
   padding: 1px;
 }
@@ -27,6 +33,6 @@ form {
   border: 3px solid green;
 }
 
-.servants-display, .single-servant, .update-form, .update-servant {
+.new-servant, .servants-display, .single-servant, .update-form, .update-servant {
   display: flex;
 }
