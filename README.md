@@ -25,9 +25,9 @@ Currently none of the problems with the app prevent it from meeting minimum viab
   - [ ] Require a name to be entered during creation.
   - [ ] Either require level, attack, and hp to be filled on creation, or default level to 1 and attack and hp to 0 if left empty.
 - [ ] Allow users to enter which classes are listed to appear in a mission, and recieve a list of servants sorted by attack, hp, or balance, modified to reflect type advantages.
-- [ ] Class sort button works, but within the same class the sorting seems to be arbitrary based on what order javascript thinks objects should be sorted in.
-  - [ ] Secondary sort should be by Rarity.
-  - [ ] Tertiary sort should be alphabetical.
+- [x] Class sort button works, but within the same class the sorting seems to be arbitrary based on what order javascript thinks objects should be sorted in.
+  - [x] Secondary sort should be by Rarity.
+  - [x] Tertiary sort should be alphabetical.
 
 ## Planning
 #### Initial timetable
