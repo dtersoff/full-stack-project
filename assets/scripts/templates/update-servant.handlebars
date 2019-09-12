@@ -18,12 +18,13 @@
           </select>
         </div>
         <div class="line"><select name='servant[rarity]'>
-            {{> create-dropdown inputs=rarities}} </select></div>
-            <div class="line"><input type='text' name='servant[level]' placeholder='{{servant.level}}'></div>
-            <div class="line"><input type='text' name='servant[atk]' placeholder='{{servant.atk}}'></div>
-            <div class="line"><input type='text' name='servant[hp]' placeholder='{{servant.hp}}'></div>
-            <div class='col-2'><input type='submit' value='Update Servant'></div>
+            {{> create-dropdown inputs=rarities}}
+          </select>
         </div>
+        <div class="line"><input type='text' name='servant[level]' placeholder='{{servant.level}}'></div>
+        <div class="line"><input type='text' name='servant[atk]' placeholder='{{servant.atk}}'></div>
+        <div class="line"><input type='text' name='servant[hp]' placeholder='{{servant.hp}}'></div>
+        <div class='col-2'><input type='submit' value='Update Servant'></div>
       </div>
     </div>
   </form>
