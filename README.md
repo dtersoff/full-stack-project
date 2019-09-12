@@ -28,6 +28,7 @@ Currently none of the problems with the app prevent it from meeting minimum viab
 - [x] Class sort button works, but within the same class the sorting seems to be arbitrary based on what order javascript thinks objects should be sorted in.
   - [x] Secondary sort should be by Rarity.
   - [x] Tertiary sort should be alphabetical.
+- [ ] Add search bar.
 
 ## Planning
 #### Initial timetable
