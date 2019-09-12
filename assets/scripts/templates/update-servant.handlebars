@@ -1,7 +1,7 @@
 {{#if servant}}
-  <form class='border'>
+  <form class='border update-servant'>
     <legend>Update Servant</legend>
-    <div class='update-servant'>
+    <div class='updatewindow'>
       <div class="key">
         <div class="line">Name: </div>
         <div class="line">Class: </div>
@@ -15,51 +15,16 @@
         <div class="line">
           <select name='servant[sclass]'>
             {{> create-dropdown inputs=classes}}
-            <!-- <option selected="selected" value="{{servant.sclass}}">{{servant.sclass}}</option>
-            <option value='Saber'>Saber</option>
-            <option value='Lancer'>Lancer</option>
-            <option value='Archer'>Archer</option>
-            <option value='Rider'>Rider</option>
-            <option value='Caster'>Caster</option>
-            <option value='Assassin'>Assassin</option>
-            <option value='Berserker'>Berserker</option>
-            <option value='Ruler'>Ruler</option>
-            <option value='Avenger'>Avenger</option>
-            <option value='Alter Ego'>Alter Ego</option>
-            <option value='Moon Cancer'>Moon Cancer</option>
-            <option value='Shielder'>Shielder</option> -->
           </select>
         </div>
         <div class="line"><select name='servant[rarity]'>
-          {{> create-dropdown inputs=rarities}}
-          <!-- <option selected="selected" value="{{servant.rarity}}">{{servant.rarity}}</option>
-          <option value='0'>0</option>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option> -->
-        </select></div>
-        <div class="line"><input type='text' name='servant[level]' placeholder='{{servant.level}}'></div>
-        <div class="line"><input type='text' name='servant[atk]' placeholder='{{servant.atk}}'></div>
-        <div class="line"><input type='text' name='servant[hp]' placeholder='{{servant.hp}}'></div>
-        <div class='col-2'><input type='submit' value='Update Servant'></div>
+            {{> create-dropdown inputs=rarities}} </select></div>
+            <div class="line"><input type='text' name='servant[level]' placeholder='{{servant.level}}'></div>
+            <div class="line"><input type='text' name='servant[atk]' placeholder='{{servant.atk}}'></div>
+            <div class="line"><input type='text' name='servant[hp]' placeholder='{{servant.hp}}'></div>
+            <div class='col-2'><input type='submit' value='Update Servant'></div>
+        </div>
+      </div>
     </div>
-  </div>
-
-      <!-- <fieldset class='update-form'>
-        <div class='col-2'>Name: <input type='text' name='servant[name]' placeholder='{{servant.name}}'></div>
-        <div class='col-2'>Class: <input type='text' name='servant[sclass]' placeholder='{{servant.sclass}}'></div>
-        <div class='col-2'>Rarity: <input type='text' name='servant[rarity]' placeholder='{{servant.rarity}}'></div>
-        <div class='col-2'>Level: <input type='text' name='servant[level]' placeholder='{{servant.level}}'></div>
-        <div class='col-2'>Attack: <input type='text' name='servant[atk]' placeholder='{{servant.atk}}'></div>
-        <div class='col-2'>Health: <input type='text' name='servant[hp]' placeholder='{{servant.hp}}'></div>
-        <div class='col-2'><input type='submit' value='Update Servant'></div>
-      </fieldset>
-    </form>
-    <form class="show-servant-button btn" data-id="{{servant.id}}">
-      <fieldset>
-        <input type='submit' value='Go Back'>
-      </fieldset> -->
   </form>
 {{/if}}
